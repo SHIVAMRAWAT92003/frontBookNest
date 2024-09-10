@@ -1,0 +1,178 @@
+/* Default (Light Mode) */
+:root {
+    --background-color: #f9f9f9;
+    --border-color: #ddd;
+    --button-background: #fff;
+    --button-text-color: #000;
+    --button-hover-background: #e0e0e0;
+    --selected-button-background: #d0eaff;
+    --text-color: #000;
+    --chart-background-color: rgba(75, 192, 192, 0.2);
+    --chart-border-color: rgba(75, 192, 192, 1);
+    --input-border-color: #ddd;
+    --add-button-background: #007bff;
+    --add-button-hover-background: #0056b3;
+    --delete-button-background: #ff4d4d;
+    --delete-button-hover-background: #cc0000;
+    --background-image-opacity: 0.3;
+  }
+  
+  /* Dark Mode */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #333;
+      --border-color: #555;
+      --button-background: #444;
+      --button-text-color: #fff;
+      --button-hover-background: #666;
+      --selected-button-background: #555;
+      --text-color: #ddd; /* Lighter text for better readability in dark mode */
+      --chart-background-color: rgba(75, 192, 192, 0.5);
+      --chart-border-color: rgba(75, 192, 192, 1);
+      --input-border-color: #666;
+      --add-button-background: #3399ff;
+      --add-button-hover-background: #007acc;
+      --delete-button-background: #ff3333;
+      --delete-button-hover-background: #cc0000;
+      --background-image-opacity: 0.4;
+    }
+  }
+  
+  .poll-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 130px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    position: relative;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+  }
+  
+  .poll-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: var(--background-image-opacity);
+    z-index: -1;
+  }
+  
+  .poll-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .poll-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .poll-button {
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--button-background);
+    color: var(--button-text-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .poll-button:hover {
+    background-color: var(--button-hover-background);
+  }
+  
+  .poll-button.selected {
+    background-color: var(--selected-button-background);
+  }
+  
+  .poll-button:disabled {
+    cursor: not-allowed;
+    background-color: #f5f5f5;
+    border-color: #ccc;
+  }
+  
+  .poll-results {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .poll-results p {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .add-option-container {
+    text-align: center;
+  }
+  
+  .add-option-input {
+    padding: 10px;
+    border: 1px solid var(--input-border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .add-option-button {
+    padding: 10px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--add-button-background);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-option-button:hover {
+    background-color: var(--add-button-hover-background);
+  }
+  
+  .add-option-button:disabled {
+    cursor: not-allowed;
+    background-color: #c0c0c0;
+  }
+  
+  .delete-button {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--delete-button-background);
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: var(--delete-button-hover-background);
+  }
+  
+  .navbar-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .poll-button,
+    .add-option-input,
+    .add-option-button {
+      width: 100%;
+    }
+  }
+  
