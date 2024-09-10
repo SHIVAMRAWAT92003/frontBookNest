@@ -4,7 +4,7 @@ import Home from './home/Home'
 import Signup from './components/Signup'
 import Courses from './courses/Courses'
 import Contact from './contact.jsx/Contact'
-import About from './About/About'
+import About from './about/About'
 import { Navigate } from 'react-router-dom'
 import Poll from "./components/Poll";
 import {Toaster} from "react-hot-toast"
