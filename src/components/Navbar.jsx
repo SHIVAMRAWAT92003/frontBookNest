@@ -52,7 +52,7 @@ function Navbar() {
       </li>
       <li>
         <a href="/poll">Poll</a>
-        </li>
+      </li>
     </>
   );
   return (
